@@ -1,0 +1,10 @@
+accronyms & descriptions:
+ mavg: Monthly average
+ manom: Average monthly change (anomaly). The control period is 1961-1999 for temperature and precipitation variables, and 1961-2000 for derived statistics.
+ pr: Precipitation (rainfall and assumed water equivalent), in inches
+ tas: Temperature, in degrees Fahrenheit
+ iso3: country code
+ gcm: global circulation models
+   bccr_bcm2_0: Bjerknes Centre for Climate Research, Univ. of Bergen, Norway/ Bergen Climate Model (BCM) Version 2
+   	a2: A2 scenario
+	b1: B1 scenario
