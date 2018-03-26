@@ -1,0 +1,3 @@
+var box = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae commodo sem, a finibus orci. Nunc aliquam, ipsum vel euismod condimentum, leo ligula tristique mauris, non vulputate odio urna sit amet sem. Suspendisse ultrices mollis gravida. Mauris sed tellus suscipit, pulvinar purus nec, tristique odio. Etiam lorem diam, dignissim id pulvinar semper, eleifend vitae urna. Mauris efficitur nunc nec mattis elementum.'
+
+d3.selectAll(".box").text(box)
