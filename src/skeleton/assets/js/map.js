@@ -20,7 +20,7 @@ function initialize(){
     };
 
     var map = L.map('map', {
-        center: [0,0],
+        center: [0,10],
         zoom: 2,
         layers: [
         layers.GREAT_LOC,
