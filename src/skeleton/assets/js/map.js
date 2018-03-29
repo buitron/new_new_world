@@ -65,7 +65,7 @@ function initialize(){
             icon: "ion-wineglass",
             iconColor: "white",
             markerColor: "blue-dark",
-            shape: "penta",
+            shape: "circle",
             iconSize: [38,46],
             iconAnchor: [14,45],
             shadowSize: [35, 16],
@@ -74,7 +74,7 @@ function initialize(){
         OK_LOC: L.ExtraMarkers.icon({
             icon: "ion-wineglass",
             iconColor: "white",
-            markerColor: "orange",
+            markerColor: "red",
             shape: "penta",
             iconSize: [38,46],
             iconAnchor: [14,45],
