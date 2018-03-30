@@ -22,10 +22,15 @@
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename='css/freelancer.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
+    <div id="loading" class="text-center">
+      <img id="loading-image" src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading...">
+      <h4 id="loading-image">LOADING...</h4>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
@@ -38,76 +43,140 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Map</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#map">Map</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Analysis</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#maxTemp">Max Temp</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Ideal Locations</a>
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#minTemp">Min Temp</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#precip">Precipitation</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#humid">Humidity</a>
+            </li>
+            <li class="nav-item mx-0 mx-lg-1">
+              <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">My Location</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
+
+    <!-- header -->
+    <header class="masthead bg-danger text-white text-center">
       <div class="container">
         <!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
         <h1 class="text-uppercase mb-0">Who Doesn't Like Sauvignon Blanc?</h1>
-        <hr class="star-light">
-        <h2 class="font-weight-light mb-0">Let's Explore the Optimal Locations for Your Vineyards</h2>
       </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section class="portfolio" id="portfolio">
-      <!-- <div class="codegena_iframe" data-src="../iFrames/d3_2.html" data-img="img/profile.png" style="height:200px;width:480px;" data-responsive="true"></div> -->
-        <iframe src="{{ url_for('static', filename='iFrames/d3_2.html') }}" width="1020" height="720"></iframe>
-    </section>
-
-    <!-- About Section -->
-    <section class="bg-primary text-white mb-0" id="about">
+    <!-- intro section -->
+    <section class="bg-primary text-white mb-0" id="intro">
       <div class="container">
-        <h2 class="text-center text-uppercase text-white">Analysis</h2>
+        <h2 class="text-center text-uppercase text-white">Explanitorium</h2>
         <hr class="star-light mb-5">
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">Soil Analysis</p>
+          <div class="col-lg-6 mr-auto">
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
           </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">Weather Analysis</p>
+          <div class="col-lg-6 ml-auto">
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
           </div>
-        </div>
-        <div class="text-center mt-4">
-          <a class="btn btn-xl btn-outline-light" href="#">
-            <i class="fa fa-download mr-2"></i>
-            Fork It!
-          </a>
         </div>
       </div>
     </section>
 
-    <!-- <form method="POST" role="form" class="form-horizontal">
-      <label>Test 2</label>
-      <input type="text" name="text" placeholder="Test">
-    <input type="submit" class="btn btn-default" value="Submit"/> -->
+    <!-- map leaflet section -->
+    <section class="portfolio" id="map">
+      <iframe class="col-lg-8 offset-lg-2 text-center" src="{{ url_for('static', filename='iFrames/d3.html') }}" height="820" frameborder="0" scrolling="no"></iframe>
+      <div class="col-lg-10 mx-auto">
+        <br>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+      </div>
+    </section>
+
+    <!-- line charts section -->
+    <section class="bg-primary text-white mb-0" id="charts">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-white">Next Level Shit</h2>
+        <hr class="star-light mb-5">
+      </div>
+    </section>
+
+    <!-- chart 1 section -->
+    <section class="portfolio" id="maxTemp">
+      <h3 class="text-uppercase ml-5 mt-4">Average Max Temp</h3>
+      <div class="row">
+        <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_2.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
+        <div class="col-lg-4 ml-auto">
+          <br>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- chart 2 section -->
+    <section class="portfolio" id="minTemp">
+      <div class="row">
+        <div class="col-lg-8 ml-auto">
+          <h3 class="text-uppercase ml-5 mt-4">Average Min Temp</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mr-auto">
+          <br>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+        </div>
+        <iframe class="col-lg-8 ml-auto" src="{{ url_for('static', filename='iFrames/d3_3.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
+      </div>
+    </section>
+
+    <!-- chart 3 section -->
+    <section class="portfolio" id="precip">
+      <h3 class="text-uppercase ml-5 mt-4">Average Precipitation</h3>
+      <div class="row">
+        <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_3.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
+        <div class="col-lg-4 ml-auto">
+          <br>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- chart 4 section -->
+    <section class="portfolio" id="humid">
+      <div class="row">
+        <div class="col-lg-8 ml-auto">
+          <h3 class="text-uppercase ml-5 mt-4">Average Humidity</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 mr-auto">
+          <br>
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+        </div>
+        <iframe class="col-lg-8 ml-auto" src="{{ url_for('static', filename='iFrames/d3_4.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
+      </div>
+    </section>
 
 
-    <!-- Contact Section -->
+    <!-- Form Section -->
     <section id="contact">
       <div class="container">
-        <h2 class="text-center text-uppercase text-secondary mb-0">Is This Location Ideal? Find Out!</h2>
+        <h2 class="text-center text-uppercase text-secondary mb-0 mt-4">Infomatrix on a Location: Find Out!</h2>
         <hr class="star-dark mb-5">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <div class="form-group floating-label-form-group controls mb-0 pb-2">
-              <form method="POST" role="form" class="form-horizontal">
+              <form method="POST" role="form" class="form-horizontal" action="sb_request">
                 <div class="control-group">
                   <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                    <label>Step right up, get your Sauvignon Blanc location stats!!</label>
-                    <input type="text" name="text" placeholder="Address">
+                    <label><h3>Latitude, Longitude Geo Coordinates</h3></label>
+                    <input type="text" name="geo" placeholder="Lat, Lon">
                   </div>
                 </div>
                 <br>
@@ -115,8 +184,173 @@
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-xl">Click Me!</button>
                 </div>
+                <!-- <div class="control-group">
+                  <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                    <label><h3>Type Your Address: [Address], [City], State/Region, Country</h3></label>
+                    <input type="text" name="addy" placeholder="Address">
+                  </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-xl">Click Me!</button>
+                </div> -->
               </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
+
+    <!-- GET user data -->
+    <section id="sb_data">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Stats</h2>
+      </div>
+    </section>
+
+    <section id="sb_data">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 offset-lg-2">
+            <h4>Geo Coordinates = {{ sb.lat_lon }}</h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 offset-lg-2">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Soil Properties: {{ sb.publish_date }}</th>
+                  <th scope="col">Values</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Carbon Content</th>
+                  <td>{{ sb.carbon }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Clay Amount</th>
+                  <td>{{ sb.clay }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">pH Levels</th>
+                  <td>{{ sb.ph }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Cation Exchange Capacity</th>
+                  <td>{{ sb.cec }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Water Wilting Point</th>
+                  <td>{{ sb.water_wp }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">Bulk Density</th>
+                  <td>{{ sb.bulk }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-lg-4">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Climate Months_2016</th>
+                  <th scope="col">Avg Max Temp F</th>
+                  <th scope="col">Avg Min Temp F</th>
+                  <th scope="col">Avg Precipitation /in</th>
+                  <th scope="col">Avg Humidity %</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">January</th>
+                  <td>{{ sb.jan_avg_max_tempF }}</td>
+                  <td>{{ sb.jan_avg_min_tempF }}</td>
+                  <td>{{ sb.jan_precipIn }}</td>
+                  <td>{{ sb.jan_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">February</th>
+                  <td>{{ sb.feb_avg_max_tempF }}</td>
+                  <td>{{ sb.feb_avg_min_tempF }}</td>
+                  <td>{{ sb.feb_precipIn }}</td>
+                  <td>{{ sb.feb_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">March</th>
+                  <td>{{ sb.mar_avg_max_tempF }}</td>
+                  <td>{{ sb.mar_avg_min_tempF }}</td>
+                  <td>{{ sb.mar_precipIn }}</td>
+                  <td>{{ sb.mar_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">April</th>
+                  <td>{{ sb.apr_avg_max_tempF }}</td>
+                  <td>{{ sb.apr_avg_min_tempF }}</td>
+                  <td>{{ sb.apr_precipIn }}</td>
+                  <td>{{ sb.apr_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">May</th>
+                  <td>{{ sb.may_avg_max_tempF }}</td>
+                  <td>{{ sb.may_avg_min_tempF }}</td>
+                  <td>{{ sb.may_precipIn }}</td>
+                  <td>{{ sb.may_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">June</th>
+                  <td>{{ sb.jun_avg_max_tempF }}</td>
+                  <td>{{ sb.jun_avg_min_tempF }}</td>
+                  <td>{{ sb.jun_precipIn }}</td>
+                  <td>{{ sb.jun_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">July</th>
+                  <td>{{ sb.jul_avg_max_tempF }}</td>
+                  <td>{{ sb.jul_avg_min_tempF }}</td>
+                  <td>{{ sb.jul_precipIn }}</td>
+                  <td>{{ sb.jul_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">August</th>
+                  <td>{{ sb.aug_avg_max_tempF }}</td>
+                  <td>{{ sb.aug_avg_min_tempF }}</td>
+                  <td>{{ sb.aug_precipIn }}</td>
+                  <td>{{ sb.aug_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">September</th>
+                  <td>{{ sb.sep_avg_max_tempF }}</td>
+                  <td>{{ sb.sep_avg_min_tempF }}</td>
+                  <td>{{ sb.sep_precipIn }}</td>
+                  <td>{{ sb.sep_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">October</th>
+                  <td>{{ sb.oct_avg_max_tempF }}</td>
+                  <td>{{ sb.oct_avg_min_tempF }}</td>
+                  <td>{{ sb.oct_precipIn }}</td>
+                  <td>{{ sb.oct_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">November</th>
+                  <td>{{ sb.nov_avg_max_tempF }}</td>
+                  <td>{{ sb.nov_avg_min_tempF }}</td>
+                  <td>{{ sb.nov_precipIn }}</td>
+                  <td>{{ sb.nov_humidPerc }}</td>
+                </tr>
+                <tr>
+                  <th scope="row">December</th>
+                  <td>{{ sb.dec_avg_max_tempF }}</td>
+                  <td>{{ sb.dec_avg_min_tempF }}</td>
+                  <td>{{ sb.dec_precipIn }}</td>
+                  <td>{{ sb.dec_humidPerc }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -165,9 +399,14 @@
             </ul>
           </div>
           <div class="col-md-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">Freelance is a free to use, open source Bootstrap theme created by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+            <h4 class="text-uppercase mb-4">Drunken_Pandas</h4>
+            <p class="lead mb-0">A team comprised of advanced MoFo coding assassins
+              <div class="text-center mt-4">
+                  <a class="btn btn-md btn-outline-light" href="https://github.com/buitron/new_new_world/">
+                    <i class="fa fa-download mr-1">Fork It!</i>
+                  </a>
+              </div>
+            </p>
           </div>
         </div>
       </div>
@@ -175,7 +414,7 @@
 
     <div class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2018</small>
+        <small>Copyright &copy; Drunken_Pandas 2018</small>
       </div>
     </div>
 
@@ -186,8 +425,15 @@
       </a>
     </div>
 
+    <script type="text/javascript" language="javascript">
+      window.onload = function() {
+        document.getElementById('loading').style.display = 'none';
+      };
+    </script>
+
     <!-- load frame -->
-    <script src="https://codegena.com/assets/js/async-iframe.js"></script>
+    <!-- <script src="https://codegena.com/assets/js/async-iframe.js"></script> -->
+    <!-- <div class="codegena_iframe" data-src="../iFrames/d3_2.html" data-img="img/profile.png" style="height:200px;width:480px;" data-responsive="true"></div> -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

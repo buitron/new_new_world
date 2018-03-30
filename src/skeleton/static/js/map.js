@@ -9,7 +9,8 @@ function initialize(){
         // id: 'mapbox.mapbox-terrain-v2',
         id: 'mapbox.satellite',
         accessToken: 'pk.eyJ1IjoiYnVpdHJvbiIsImEiOiJjamVscGdqMGMxbDM4MndtZWkyNzlya3k3In0.pKbQxM0ARbeBunYG4UBZ-Q',
-        maxZoom: 16
+        maxZoom: 16,
+        minZoom: 2
     });
 
 
