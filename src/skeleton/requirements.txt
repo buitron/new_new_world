@@ -1,0 +1,5 @@
+Flask==0.12.2
+Flask-Cors==3.0.3
+Flask-PyMongo==0.5.1
+gunicorn==19.7.1
+requests==2.18.4

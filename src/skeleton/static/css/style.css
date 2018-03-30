@@ -1,43 +1,19 @@
-form {
-    color: white;
+#loading {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 0.9;
+    background-color: #fff;
+    z-index: 99;
+    text-align: center;
 }
 
-#intro {
-    background-image: url(../../../images/img2.gif);
-    background-size: 100% 100%;
-    opacity: 0.8;
-    height: 400px;
-}
-
-#mid {
-    background-image: url(../../../images/img1.gif);
-    background-size: 100% 100%;
-    opacity: 0.8;
-    height: 300px;
-}
-
-#ending {
-    background-image: url(../../../images/img1.gif);
-    background-size: 100% 100%;
-    opacity: 0.8;
-    height: 300px;
-}
-
-#content-1, #content-2, #chart-1, #form-1 {
-    background-color: black;
-    min-height: 200px;
-}
-
-.display-2 {
-    color:black;
-}
-
-.lead {
-    color: black;
-    font-size: 32px;
-}
-
-.box {
-    outline: 2px solid white;
-    color: white;
+#loading-image {
+    position: absolute;
+    top: 450px;
+    left: 750px;
+    z-index: 100;
 }
