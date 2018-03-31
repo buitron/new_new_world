@@ -14,7 +14,6 @@ db = client['sb']
 def main_chick():
     sb = db.sb.find_one()
     return render_template('index.html', sb=sb)
-    # return render_template('index.html')
 
 
 @app.route('/sb_request', methods=['POST'])
@@ -36,4 +35,4 @@ def side_chick():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
