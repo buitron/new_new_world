@@ -190,7 +190,7 @@ function initialize(){
             if (d.name.split(',')[1] != ' US'){// On click make d.visible
               d.visible = !d.visible; // If array key for this data selection is "visible" = true then make it false, if false then make it true
 
-              maxY = findMaxY(categories); // Find max Y rating value categories data with "visible"; true
+              maxY = findMaxY(error, categories); // Find max Y rating value categories data with "visible"; true
               yScale.domain([0,maxY]); // Redefine yAxis domain based on highest y value of categories data with "visible"; true
               svg.select(".y.axis")
                 .transition()
@@ -241,7 +241,7 @@ function initialize(){
             if (d.name.split(',')[1] === ' US'){
               d.visible = !d.visible;
 
-              maxY = findMaxY(categories);
+              maxY = findMaxY(error, categories);
               yScale.domain([0,maxY]);
               svg.select(".y.axis")
                 .transition()
@@ -280,7 +280,7 @@ function initialize(){
               .transition()
               .call(xAxis);
 
-        maxY = findMaxY(categories); // Find max Y rating value categories data with "visible"; true
+        maxY = findMaxY(error, categories); // Find max Y rating value categories data with "visible"; true
         yScale.domain([0,maxY]); // Redefine yAxis domain based on highest y value of categories data with "visible"; true
 
         svg.select(".y.axis") // Redraw yAxis
@@ -296,7 +296,7 @@ function initialize(){
       };
     });
 
-      function findMaxY(data){
+      function findMaxY(error, data){
         var maxYValues = data.map((d) => {
           if (d.visible){
             return d3.max(d.values, (value) => {

@@ -28,8 +28,12 @@
 
   <body id="page-top">
     <div id="loading" class="text-center">
-      <img id="loading-image" src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading...">
-      <h4 id="loading-image">LOADING...</h4>
+      <div id="loading-image" class="h-100 row align-items-center">
+        <div class="col-lg">
+          <img class="rounded-circle" src="{{ url_for('static', filename='images/loading.gif') }}" alt="Loading...">
+          <h4>LOADING...</h4>
+        </div>
+      </div>
     </div>
 
     <!-- Navigation -->
@@ -67,12 +71,21 @@
 
 
     <!-- header -->
-    <header class="masthead bg-danger text-white text-center">
-      <div class="container">
-        <!-- <img class="img-fluid mb-5 d-block mx-auto" src="img/profile.png" alt=""> -->
-        <h1 class="text-uppercase mb-0">Who Doesn't Like Sauvignon Blanc?</h1>
+    <div class="video-header wrap">
+      <div class="fullscreen-video-wrap">
+        <video autoplay loop>
+          <source src="https://d27shkkua6xyjc.cloudfront.net/videos/maaemo-film-2.mp4?mtime=20141113185431" type="video/mp4">
+          <source src="https://d27shkkua6xyjc.cloudfront.net/videos/maaemo-film-2.ogv?mtime=20141113185421" type="video/ogg">
+        </video>
+        <div class="header-overlay">
+          <div class="header-content text-white">
+            <h1 class="text-uppercase mb-0">Who Doesn't Like Sauvignon Blanc?</h1>
+            <p>Your friendly web-application designed to provide you with relevant info on grape cultivating locations, optimized for Sauvignon Blanc.</p>
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
+
 
     <!-- intro section -->
     <section class="bg-primary text-white mb-0" id="intro">
@@ -81,10 +94,10 @@
         <hr class="star-light mb-5">
         <div class="row">
           <div class="col-lg-6 mr-auto">
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+            <p class="lead">What makes really great wine? It takes more than love and patience to make an excellent vintage. We sought out to find the trends that create a beautiful glass of vino around the world. Using our love and skill for data we identified that climate and soil composition tell the story of how great wine-grapes are created.</p>
           </div>
           <div class="col-lg-6 ml-auto">
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+            <p class="lead">Sauvignon Blanc is one of the most popular wines in the world, and is the most profitable wine in the world. The characteristics the Sauvignon Blanc grapes lend itself to being the front runner. It thrives in cool climates, but can develop desirable flavors in both cool and warm environments. This has allowed it to be grown across the globe. It buds early, grows quickly, and can produce several harvest within the same year. All seasons are Sauvignon Blanc season.</p>
           </div>
         </div>
       </div>
@@ -95,7 +108,7 @@
       <iframe class="col-lg-8 offset-lg-2 text-center" src="{{ url_for('static', filename='iFrames/d3.html') }}" height="820" frameborder="0" scrolling="no"></iframe>
       <div class="col-lg-10 mx-auto">
         <br>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+        <p class="lead">Location, location, location! The map above indicates the Sauvignon Blanc vineyards ranked by <a href="https://www.winemag.com/">Wine Enthusiast Magazine</a> for the year 2016. Each marker represents a different appellation. By clicking on a marker the legend will update with relevant information for that locale. The container above the legend allows you to filter the selected vineyards further by rank - Best Rated: x&gt;=90, Greatly Rated: 90&gt;x&gt;=85, Moderately Rated: x&gt;85.</p>
       </div>
     </section>
 
@@ -110,11 +123,12 @@
     <!-- chart 1 section -->
     <section class="portfolio" id="maxTemp">
       <h3 class="text-uppercase ml-5 mt-4">Average Max Temp</h3>
-      <div class="row">
+      <div class="row m-0">
         <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_2.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
         <div class="col-lg-4 ml-auto">
           <br>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+          <p class="lead">The average max temperature for Sauvignon Blanc growing locations exhibit mild fluctuations over the months, as ideal climates for cultivating Sauvignon Blanc are moderate and generally do not exceed 85 degrees fahrenheit.</p>
+          <p class="lead"> In cooler climates, the grape may produce wines with noticeable acidity and flavors of grass, green bell peppers, tropical fruit, and floral notes. In warmer climates, it can develop more tropical fruit notes but also grapefruit and and peach notes and may require earlier harvesting.</p>
         </div>
       </div>
     </section>
@@ -126,10 +140,11 @@
           <h3 class="text-uppercase ml-5 mt-4">Average Min Temp</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row m-0">
         <div class="col-lg-4 mr-auto">
           <br>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+          <p class="lead">The average minimum temperature of Sauvignon Blanc growing locations are lower than some other popular wines such as Cabernet Sauvignon. The average minimum temperature for Sauvignon Blanc growth is roughly 40 degrees fahrenheit. This allows for more versatile growing regions, more resilient crops, and a varietal that can take on many flavor characteristics because of its adaptability.</p>
+          <p class="lead">There is a correlation between the temperature fluctuations of daily maximum and minimum temperatures during growing season and wine ratings. The fluctuations are ideal for grape growth as the stress develops flavors in the grapes that translate to complexity in the wine.</p>
         </div>
         <iframe class="col-lg-8 ml-auto" src="{{ url_for('static', filename='iFrames/d3_3.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
       </div>
@@ -138,11 +153,12 @@
     <!-- chart 3 section -->
     <section class="portfolio" id="precip">
       <h3 class="text-uppercase ml-5 mt-4">Average Precipitation</h3>
-      <div class="row">
+      <div class="row m-0">
         <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_3.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
         <div class="col-lg-4 ml-auto">
           <br>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+          <p class="lead">Precipitation plays a crucial role to the development of the fruit throughout the growing season. Excessive water stress (lack of water) early in the fruit growth can be very damaging, although water stress during the development can develop flavors in the fruit by slowing the growth of the berry. </p>
+          <p class="lead">Precipitation and soil makeup are closely tied and when considered together can strongly impact the development of the fruit and the subsequent wine. The organic material and flora in the soil respond to the available water content. Soil components respond differently to holding moisture, for example, sand does not hold water well, but clay retains enough moisture to nourish plant life, but creates an ideal amount of water stress, making clay an ideal component in soil used for wine cultivation. These factors, combined with precipitation, play a part vital in the flavor evolution of Sauvignon Blanc grapes.</p>
         </div>
       </div>
     </section>
@@ -154,10 +170,11 @@
           <h3 class="text-uppercase ml-5 mt-4">Average Humidity</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row m-0">
         <div class="col-lg-4 mr-auto">
           <br>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis purus dui, pharetra pulvinar nibh ornare eu. Ut congue sollicitudin neque ut posuere. Sed et dictum ipsum. Nullam facilisis nunc urna, in lobortis lorem fringilla sed. In hac habitasse platea dictumst. Nulla ut vehicula urna. In rhoncus ipsum sed arcu ultricies, vel eleifend lacus suscipit. Suspendisse ut sagittis lacus, eget molestie purus. Fusce ultrices lobortis nisi cursus bibendum. Cras augue lorem, porta ac tellus id, pharetra semper ipsum.</p>
+          <p class="lead">The presence of humidity at the right time in the Sauvignon Blanc fruit growth can have remarkable effects of the development, which is why we were able to detect a notable correlation of humidity levels and Wine Enthusiast ratings.</p>
+          <p class="lead">Just as flora in the soil affects the outcome of the wine, so does the flora above the soil. Very high and very low humidity can adversely influence grape development but moderate and consistent humidity can support the growth of wanted cultures leading to some of the most sought after wines in the world.</p>
         </div>
         <iframe class="col-lg-8 ml-auto" src="{{ url_for('static', filename='iFrames/d3_4.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
       </div>
@@ -212,7 +229,7 @@
     <section id="sb_data">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-4 offset-lg-2">
+          <div class="col-lg-10 offset-lg-2">
             <h4>Geo Coordinates = {{ sb.lat_lon }}</h4>
           </div>
         </div>
@@ -431,9 +448,6 @@
       };
     </script>
 
-    <!-- load frame -->
-    <!-- <script src="https://codegena.com/assets/js/async-iframe.js"></script> -->
-    <!-- <div class="codegena_iframe" data-src="../iFrames/d3_2.html" data-img="img/profile.png" style="height:200px;width:480px;" data-responsive="true"></div> -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
