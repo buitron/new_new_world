@@ -1,8 +1,9 @@
 import requests as req
+import os
 
 
 def process(geo_coords):
-    key = 'd018de65354847b096d232619182203'
+    key = os.environ['WWO_KEY_1']
 
     lat = float(geo_coords.split(',')[0].replace(' ', ''))
     lon = float(geo_coords.split(',')[1].replace(' ', ''))
