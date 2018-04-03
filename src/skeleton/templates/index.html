@@ -105,7 +105,7 @@
     </section>
 
     <!-- map leaflet section -->
-    <section class="portfolio" id="map">
+    <section class="bg-white portfolio" id="map">
       <iframe class="col-lg-8 offset-lg-2 text-center" src="{{ url_for('static', filename='iFrames/d3.html') }}" height="820" frameborder="0" scrolling="no"></iframe>
       <div class="col-lg-10 mx-auto">
         <br>
@@ -122,7 +122,7 @@
     </section>
 
     <!-- chart 1 section -->
-    <section class="portfolio" id="maxTemp">
+    <section class="bg-white portfolio" id="maxTemp">
       <h3 class="text-uppercase ml-5 mt-4">Average Max Temp</h3>
       <div class="row m-0">
         <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_2.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
@@ -135,7 +135,7 @@
     </section>
 
     <!-- chart 2 section -->
-    <section class="portfolio" id="minTemp">
+    <section class="bg-white portfolio" id="minTemp">
       <div class="row">
         <div class="col-lg-8 ml-auto">
           <h3 class="text-uppercase ml-5 mt-4">Average Min Temp</h3>
@@ -152,7 +152,7 @@
     </section>
 
     <!-- chart 3 section -->
-    <section class="portfolio" id="precip">
+    <section class="bg-white portfolio" id="precip">
       <h3 class="text-uppercase ml-5 mt-4">Average Precipitation</h3>
       <div class="row m-0">
         <iframe class="col-lg-8 mr-auto" src="{{ url_for('static', filename='iFrames/d3_3.html') }}" height="820" frameborder="0" scrolling="yes"></iframe>
@@ -165,7 +165,7 @@
     </section>
 
     <!-- chart 4 section -->
-    <section class="portfolio" id="humid">
+    <section class="bg-white portfolio" id="humid">
       <div class="row">
         <div class="col-lg-8 ml-auto">
           <h3 class="text-uppercase ml-5 mt-4">Average Humidity</h3>
@@ -183,7 +183,7 @@
 
 
     <!-- Form Section -->
-    <section id="contact">
+    <section id="contact" class="bg-white">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0 mt-4">Infomatrix on a Location: Find Out!</h2>
         <hr class="star-dark mb-5">
@@ -221,14 +221,14 @@
 
 
     <!-- GET user data -->
-    <section id="sb_data">
+    <section id="sb_data" class="bg-white">
       <div class="container">
         <h2 class="text-center text-uppercase text-secondary mb-0">Stats</h2>
       </div>
     </section>
 
-    <section id="sb_data">
-      <div class="container-fluid">
+    <section id="sb_data" class="bg-white">
+      <div class="bg-white container-fluid">
         <div class="row">
           <div class="col-lg-10 offset-lg-2">
             <h4>Geo Coordinates = {{ sb.lat_lon }}</h4>
@@ -446,7 +446,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <!-- Contact Form JavaScript -->
@@ -454,7 +454,7 @@
     <script src="{{ url_for('static', filename='js/contact_me.js') }}"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/freelancer.min.js') }}"></script> -->
     <script src="{{ url_for('static', filename='js/content.js') }}"></script>
 
   </body>

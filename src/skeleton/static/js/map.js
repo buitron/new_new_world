@@ -114,7 +114,7 @@ function initialize(){
 
                 updateLegend("0", "0", "earth", "world", "", "", "", "", "", "");
             }
-            catch {
+            catch(err){
                 console.log("nope");
             }
         });
