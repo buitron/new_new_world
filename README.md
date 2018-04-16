@@ -72,7 +72,7 @@ wine.head()
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -84,7 +84,7 @@ wine.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -253,7 +253,7 @@ new_df
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -265,7 +265,7 @@ new_df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -332,7 +332,7 @@ df1.head()
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -344,7 +344,7 @@ df1.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -566,7 +566,7 @@ plt.show()
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["cec_norm"],facecolors='blue', edgecolors='black', marker="o")
 plt.title("rating _norm vs. cec_norm")
@@ -580,11 +580,11 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_11_0.png)
+![png](images/analysis/output_11_0.png) -->
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["clay_norm"], facecolors='blue', edgecolors='black',marker="o")
 plt.title("rating _norm vs. clay_norm")
@@ -598,7 +598,7 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_12_0.png)
+![png](images/analysis/output_12_0.png) -->
 
 
 
@@ -638,7 +638,7 @@ plt.show()
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["bulk_norm"],facecolors='blue', edgecolors='black', marker="o")
 plt.title("rating _norm vs. bulk_norm")
@@ -652,11 +652,11 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_15_0.png)
+![png](images/analysis/output_15_0.png) -->
 
 
 
-```python
+<!-- ```python
 # multiple linear correlations
 ```
 
@@ -667,7 +667,7 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_17_0.png)
+![png](images/analysis/output_17_0.png) -->
 
 
 
@@ -761,7 +761,7 @@ wine.head()
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -773,7 +773,7 @@ wine.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -942,7 +942,7 @@ new_df
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -954,7 +954,7 @@ new_df
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1021,7 +1021,7 @@ df1.head()
 
 
 <div>
-<style>
+<!-- <style>
     .dataframe thead tr:only-child th {
         text-align: right;
     }
@@ -1033,7 +1033,7 @@ df1.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-</style>
+</style> -->
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1235,7 +1235,7 @@ plt.show()
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["cec_norm"], marker="o")
 plt.title("rating _norm vs. cec_norm")
@@ -1249,11 +1249,11 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_11_0_1.png)
+![png](images/analysis/output_11_0_1.png) -->
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["clay_norm"], marker="o")
 plt.title("rating _norm vs. clay_norm")
@@ -1267,7 +1267,7 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_12_0_1.png)
+![png](images/analysis/output_12_0_1.png) -->
 
 
 
@@ -1307,7 +1307,7 @@ plt.show()
 
 
 
-```python
+<!-- ```python
 plt.figure(figsize=(15,5))
 plt.scatter(df1["rating _norm"], df1["bulk_norm"], marker="o")
 plt.title("rating _norm vs. bulk_norm")
@@ -1321,7 +1321,7 @@ plt.show()
 ```
 
 
-![png](images/analysis/output_15_0_1.png)
+![png](images/analysis/output_15_0_1.png) -->
 
 
 
@@ -1348,7 +1348,7 @@ Wine truly has a goldilocks zone for all of the factors. As mentioned in the web
 The same is true for Diurnal temp var. No temp variance will leave to under developed flavors, and just poor wine. The stress of temp variation is KEY to
 Producing the sugars needed to create delicious and alcoholic wines.
 
-The web application touches on ‘stress’ in temperature and water availability, but to reiterate, a balance of soil and climate stresses are what truly build the character of this wine. This deserves a modification to the old addage...
+The web application touches on ‘stress’ in temperature and water availability, but to reiterate, a balance of soil and climate stresses are what truly build the character of this wine. This deserves a modification to the old addage - "it grows sweeter with time”" to - "it grows better with stress".
 
 
 ## Step 3 - Application Build
